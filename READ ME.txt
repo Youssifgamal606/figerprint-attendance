@@ -1,0 +1,64 @@
+-----------------------------------------------------------------------------------------How to use the attendance system--------------------------------------------------------------------------------------------------------------------
+                                                           -make sure to install the ZKTeco first using the (ZKTime5.0Attendance.....rar) file-
+
+
+1-open the ZKTEco attendance management desktop app.
+
+
+2-connect to the device using the ethernet, this is by clicking on the device 
+then clicking on the connect green icon in the top.
+
+
+3-select (device management) option from the file menu ( which is found in the top).
+
+
+4-select (download attendance logs) option.
+
+
+5-click on AC log icon ( which is found in the top left side ).
+
+
+6-select the date and time then click on search option.
+
+
+7-select (simple calc) option ( which is found below the select time and date option ).
+
+
+8-click on (Advanced export) option.
+
+
+9-click on (load export option ) then choose the file named "exportoptions.cfg" (which is found in the {attendance_system} folder).
+
+
+10-choose to export the csv file in the {attendance_system} folder, (by clicking on the (select) option in top right corner and choosing the file destination).
+
+
+11-click on (start export) option.
+
+
+12-go to the {attendance_system} folder
+
+
+13.1-If your operating system is windows, double click on the file named (format.exe).    // this file is basically takes the csv file that was exported by the ZKTeco desktop app and reformats it so that we can calculate the working hours of the employees depending on their first and last fingerprint scan in that day.  
+
+
+13.2-If you operating system is mac or linux, double click on the file named (format.py). // this is the raw code for the formating python program
+
+
+14-Type the date of the exported csv file date  .
+
+
+15- you will find the file in the {attendance history} folder which is found inside the attendance_system} folder .
+
+
+
+---------------------------------------------------------------------------------------Things to consider------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+1- The program calculates the duration spent using the first and last scans and not in an interval sort of format.
+   This means that when people leave and enter the company multiple times throughtout the day, only the first and last entries are taken into consideratiion.
+   ZKTeco exports all entries, however the reformatter ignores all exntries, but the first and last ones.
+
+
+2- Some issues may occour if no employees attend at all (this theory is not tested).
